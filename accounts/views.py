@@ -31,7 +31,7 @@ class UserLoginView(generics.CreateAPIView):
 
 
 class UserLogoutView(APIView):
-    permission_class = IsAuthenticated
+    permission_classes = [IsAuthenticated,]
 
     def get(self, request, *args, **kwargs):
         try:
